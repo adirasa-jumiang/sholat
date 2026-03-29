@@ -72,6 +72,19 @@ button:hover {
 </style>
 </head>
 <body>
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+
+  <div class="sidebar" id="sidebar">
+    <center><img src="ADIRASA.png" width="70px" height="70px" style="border-radius: 50%; border-color: white; border-style: solid;"></center><hr>
+    <h2>Menu</h2><hr>
+    <a href="index.html">Beranda</a>
+    <a href="https://ra-adirasa.blogspot.com/">R.A. Adirasa</a>
+    <a href="help.html">Cara Pakai</a>
+    <a href="about.html">Tentang Aplikasi</a>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+  
   <h1>Gerakan Sholat dan Bacaan</h1>
 
   <!-- Gambar karakter -->
@@ -224,6 +237,18 @@ button:hover {
         playNext();
       };
     }
+  </script>
+
+    <!-- menu -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+
+      sidebar.classList.toggle("open");
+      overlay.classList.toggle("active");
+    }
+
   </script>
 </body>
 </html>
